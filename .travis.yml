@@ -14,4 +14,7 @@ deploy:
   skip_cleanup: true
   script: export ENV=production; make terraform apply
   on:
-    branch: /^v[0-9]+\.[0-9]+\.[0-9]+$/
+    branch: "/^v[0-9]+\\.[0-9]+\\.[0-9]+$/"
+env:
+  global:
+    secure: zzyhR/UMyiZbseTTlKu2imuWyHeY8w0PuY2MqnUQQ0n2n8DM4rh2qb26vIL9+LfZdWrt7CDt6q6p1I3SKHrF5EsTox/zSUunZBAPXOXMnRw0VVxMD9gwEqYSi/l5Gwgjyjz3uiWMalgrG7IiIXJ9PkHcY6tnkmoiwVNKzDVK+NVqKSMXSYs+JK13mdcTbE7/jLwCFbYczvCHYxUHccShN1lpzoQfzOLnTQJNmBbe2zwwNtI9hA+lwNl48orDYQswtzcGVFT+5ZBL1dp7XXmysoHHBXgfoVbf2eepOgzbkLRt85s6l9JxwE6sumH0pRa8oU3Ku9yEdroZX2zwNcAyaFg5ZYSxcSmt/DsdIxYgWFVFf9uW6wkF7bOEV2/dHxFmAiED+tqtK1MX5C/vzqW41upUly5o7+q2nzoDpKx6Fm/63fH0tEJs0pUOlua4Q7YCsdHOYRQZcuAbzsgdTQgriH1lDovhUnyV87SqFj4YFnYqeNypCzGx8CzSHRQkEPKxXwyAEvtLjqhMn65pvYzGPPnORTG3stGNALlKSZRB5vGmGBNlW5uHRpgo0ggR5RyVyLZET8dRB5iuU3eZalKJJrGtwAilylhZ0rO5KBwBTnHFl5wQQGutmFnUH57NfBVLbwHhpEjEPCZtlJNb6pL98lZtAIJUDvrOq4JhvF9HTxQ=
