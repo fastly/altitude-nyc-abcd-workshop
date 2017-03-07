@@ -1,3 +1,4 @@
+sudo: required
 cache:
 - directories:
   - "$TRAVIS_BUILD_DIR/.terraform"
