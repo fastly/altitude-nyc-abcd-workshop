@@ -3,7 +3,7 @@ cache:
 - directories:
   - "$TRAVIS_BUILD_DIR/.terraform"
   - "$HOME/terraform"
-script: make plan
+script: export ENV=staging; make plan
 deploy:
 - provider: script
   skip_cleanup: true
