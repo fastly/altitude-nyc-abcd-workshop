@@ -1,2 +1,27 @@
-# altitude-nyc-abcd-workshop
-Practical exercises for "ABCD: Always be continuously deploying" workshop at Altitude NYC 2017
+# ABCD: Always be continuously deploying
+This repository contains the files and excercises needed to participate in the [Fastly Altitude NYC 2017]() workshop "Always be continuously deploying".
+
+**Welcome!**
+The goal of the workshop is to build a continuous deployment pipeline around an example Fastly config. Combining Fastly’s 5-second deploys, API control, and some open-source tooling (Travis, Terraform) attendees will contribute live changes and see their results in the demo.
+
+## Prerequisites
+- Have a GitHub account
+- Have a machine with a terminal prompt
+
+## Install:
+- Fork the GitHub repo: [https://github.com/fastly/altitude-nyc-abcd-workshop](https://github.com/fastly/altitude-nyc-abcd-workshop)
+- Clone the repo to a local directory on your machine:
+ - Via SSH: `git clone git@github.com:<USERNAME>/altitude-nyc-abcd-workshop.git`
+ - Via HTTP: `git clone https://github.com/<USERNAME>/altitude-nyc-abcd-workshop.git`
+- Change directory into the repo: `cd altitude-nyc-abcd-workshop`
+- Install the dependencies `make install`
+-  If you already have Terraform installed on your machine or would prefer to install manually, skip this step.
+- You're good to go!
+
+## Exercises:
+To start, follow the tasks in the `exercises` directory:
+
+1. [Define a Fastly service with Terraform](exercises/1.md)
+2. [Configure continuous deployment with Travis](exercises/2.md)
+3. [Setup multiple environments: staging & production](exercises/3.md)
+4. [Add custom vcl](exercises/4.md)
