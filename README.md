@@ -15,7 +15,7 @@ The goal of the workshop is to build a continuous deployment pipeline around an 
  - Via HTTP: `git clone https://github.com/<USERNAME>/altitude-nyc-abcd-workshop.git`
 - Change directory into the repo: `cd altitude-nyc-abcd-workshop`
 - Install the dependencies `make install`
--  If you already have Terraform installed on your machine or would prefer to install manually, skip this step.
+ -  If you already have [Terraform](https://www.terraform.io/downloads.html) and the [Travis gem](https://github.com/travis-ci/travis.rb#installation) installed on your machine or would prefer to install manually, skip this step.
 - You're good to go!
 
 ## Exercises:
