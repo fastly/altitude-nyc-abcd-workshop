@@ -20,6 +20,7 @@ The goal of the workshop is to build a continuous deployment pipeline around an 
 
 ## Exercises:
 To start, follow the tasks in the `exercises` directory:
+
 1. [Define a Fastly service with Terraform](exercises/1.md)
 2. [Configure continuous deployment with Travis](exercises/2.md)
 3. [Setup multiple environments: staging & production](exercises/3.md)
