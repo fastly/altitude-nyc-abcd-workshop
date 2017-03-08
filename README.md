@@ -1,3 +1,5 @@
+<img src="https://www.fastly.com/altitude-nyc/images/footer-logo.png" width="300">
+
 # ABCD: Always be continuously deploying
 This repository contains the files and excercises needed to participate in the [Fastly Altitude NYC 2017]() workshop "Always be continuously deploying".
 
