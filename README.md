@@ -8,7 +8,7 @@ The goal of the workshop is to build a continuous deployment pipeline around an 
 
 ## Prerequisites
 - Have a GitHub account
-- Have a machine with a terminal prompt
+- Have a machine with a terminal prompt, `Make` and `Ruby` installed
 
 ## Install:
 - Fork the GitHub repo: [https://github.com/fastly/altitude-nyc-abcd-workshop](https://github.com/fastly/altitude-nyc-abcd-workshop)
@@ -17,6 +17,7 @@ The goal of the workshop is to build a continuous deployment pipeline around an 
  - Via HTTP: `git clone https://github.com/<USERNAME>/altitude-nyc-abcd-workshop.git`
 - Change directory into the repo: `cd altitude-nyc-abcd-workshop`
 - Install the dependencies `make install`
+ - This will install the Terraform binary to your `$HOME` directory and link your `$PATH`. Permission may be required.
  -  If you already have [Terraform](https://www.terraform.io/downloads.html) and the [Travis gem](https://github.com/travis-ci/travis.rb#installation) installed on your machine or would prefer to install manually, skip this step.
 - You're good to go!
 
