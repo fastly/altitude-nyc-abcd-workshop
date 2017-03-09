@@ -3,7 +3,7 @@ cache:
 - directories:
   - "$TRAVIS_BUILD_DIR/.terraform"
   - "$HOME/terraform"
-install: make install
+install: make install-terraform
 script: export ENV=staging; make terraform-plan
 deploy:
 - provider: script
