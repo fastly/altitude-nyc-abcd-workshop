@@ -1,5 +1,12 @@
-# Add your configuration below
+# This is the token to communicate with the Fastly API. This was provisioned in
+# advance and can be found at terraform/terraform.tfvars.
 variable "fastly_api_token" {
+  type = "string"
+}
+
+# This is a unique value for your service in the class. This was provisioned in
+# advance and can be found at terraform/terraform.tfvars.
+variable "fastly_name" {
   type = "string"
 }
 
@@ -8,18 +15,13 @@ provider "fastly" {
 }
 
 resource "fastly_service_v1" "my-fastly-service" {
-  name = "my fastly demo service"
+  name = "${var.fastly_name}"
 
   force_destroy = true
 
   domain {
-    name    = "my-fastly-demo-service.fastly-altitude-2017.com"
-    comment = "Demo domain"
-  }
-
-  domain {
-    name    = "my-fastly-demo-service-2.fastly-altitude-2017.com"
-    comment = "Demo domain"
+    name    = "${var.fastly_name}.fastly-altitude-2017.com"
+    comment = "Altitude 2017 workshop domain"
   }
 
   backend {
@@ -39,4 +41,8 @@ resource "fastly_service_v1" "my-fastly-service" {
     destination = "http.Host"
     source      = "\"altitude-nyc-abcd-2017-stage.storage.googleapis.com\""
   }
+}
+
+output "address" {
+  value = "${var.fastly_name}.fastly-altitude-2017.com.global.prod.fastly.net/index.html"
 }
