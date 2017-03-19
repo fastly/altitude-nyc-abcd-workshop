@@ -44,5 +44,5 @@ resource "fastly_service_v1" "my-fastly-service" {
 }
 
 output "address" {
-  value = "${var.fastly_name}.global.prod.fastly.net/index.html"
+  value = "${var.fastly_name}.fastly-altitude-2017.com.global.prod.fastly.net/index.html"
 }
