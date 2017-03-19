@@ -1,10 +1,9 @@
-# We require the sudo command
 sudo: required
-# Cache the Terraform binary and our local state after each build
 cache:
 - directories:
   - "$HOME/terraform"
-# Run make install command to fetch Terraform binary
 install: make install-terraform
-# Run Terraform plan
 script: terraform plan -var fastly_api_token=$FASTLY_API_TOKEN ./terraform
+env:
+  global:
+    secure: nDvN4gmJqMJvIacL+X3Or/pbRHLHlC6ZyxvNUlLUoDIf3ywC0L1lXGVp0Q2f9KjBgtC0XVs8yYqrIXKq5nYpcndetjpjk77hsHw9eAx2sGtVcS22k/Rga0ixMTnmr3SQHr4dXfOdUD99FTn3JJYhvb1+m9zX1DxcaCTxJzpAS+NyuhP21zuuphOmg+NEz0yNOxWWdgGrHgl0jdWSglNZbsWYmC9/oUmBnMuAn6piT3++mizirhVL7UXFUohDxLJE50mj1VavCqt2K56lhp8AAnvm+YfqPCWSOe+j8Li0krlv7QUURTzpMcnNxOiBLIVCeUYjNxwlfPsMw/Bb5cih1TNEx7HdeVlDi0GFOzG1hsiTMpDQXwrtjKy3h+8g3RH5IMLsc0yhg6wZ23l7uJCXdWwOfZ5GAccFJ0LwTecU2xk2ccotXw5LoPzlt9Sn/DEeq0JvU3u5HduZIKUMXO5zp+5n9ntT0yOSN5qfEJvCBTT1k9S3F8dptDJmktQcbMrQB8UE7jwrwnYMe6IV6LCA4sNBzykRi18ubtzfCihft2AKX/RtVXiAaCxxNVIhjr61fMM0m+QM25HJ6pg7zHtSDuNaAP4hM0MemExM6/WXD01llB9nHvs2N90vSLfb3D1GsZGSdOb4p3tyWsHSe+keWffB84W11fCApCIZFzD0N8M=
