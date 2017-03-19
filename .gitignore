@@ -1,2 +1,2 @@
 .env
-terraform/*.tfvars
+terraform.tfvars
