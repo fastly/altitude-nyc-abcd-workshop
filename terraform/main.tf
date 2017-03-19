@@ -17,6 +17,11 @@ resource "fastly_service_v1" "my-fastly-service" {
     comment = "Demo domain"
   }
 
+  domain {
+    name    = "my-fastly-demo-service-2.fastly-altitude-2017.com"
+    comment = "Demo domain"
+  }
+
   backend {
     address               = "storage.googleapis.com"
     ssl_hostname          = "altitude-nyc-abcd-2017-stage.storage.googleapis.com"
