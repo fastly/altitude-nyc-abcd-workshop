@@ -42,3 +42,7 @@ resource "fastly_service_v1" "my-fastly-service" {
     source      = "\"altitude-nyc-abcd-2017-stage.storage.googleapis.com\""
   }
 }
+
+output "address" {
+  value = "${var.fastly_name}.global.prod.fastly.net/index.html"
+}
