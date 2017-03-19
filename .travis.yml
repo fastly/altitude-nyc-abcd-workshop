@@ -1,2 +1,20 @@
-# Add your configuration below
-
+# We require the sudo command
+sudo: required
+# Cache the Terraform binary and our local state after each build
+cache:
+- directories:
+  - "$HOME/terraform"
+# Run make install command to fetch Terraform binary
+install: make install-terraform
+# Run Terraform plan
+script: terraform plan -var fastly_api_token=$FASTLY_API_TOKEN ./terraform
+deploy:
+# The deploy will be a simple script command
+- provider: script
+  # don't cleanup the build aretfacts before deployment
+  skip_cleanup: true
+  # run the terraform apply command
+  script: terraform apply -var fastly_api_token=$FASTLY_API_TOKEN ./terraform
+  # only run this deploy step when merging into master
+  on:
+    branch: master
